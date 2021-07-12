@@ -1,0 +1,74 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    position: relative;
+    background: #c7efff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.road img {
+    height: 25vh;
+    width: 200vw;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    animation: moving 3s linear infinite 1s;
+}
+
+@keyframes moving {
+    100% {
+        transform: translateX(-100vw);
+    }
+}
+
+.trees {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200vw;
+    display: flex;
+    z-index: 5;
+    animation: moving 3s linear infinite 1s;
+}
+.trees img {
+    width: 100vw;
+    height: 80vh;
+}
+
+.car-body {
+    height: 130px;
+    position: absolute;
+    left: 25vw;
+    bottom: 10vh;
+    z-index: 20;
+}
+
+.wheel-1 {
+    height: 70px;
+    position: absolute;
+    left: 358px;
+    top: 475px;
+    z-index: 30;
+    animation:  rotate 0.3s linear infinite 1s;
+}
+
+.wheel-2 {
+    position: absolute;
+    height: 70px;
+    left: 633px;
+    top: 478px;
+    z-index: 30;
+    animation:  rotate 0.3s linear infinite 1s;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
